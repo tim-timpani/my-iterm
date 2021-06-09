@@ -68,6 +68,31 @@ For details, refer to the documentation https://iterm2.com/documentation-scripti
   iTerm. See example scripts/color_tabs.py.
 * External scripts are run outside of iTerm but can still 
   interact with it. See example scripts/iterm_window.py.
+  
+### Running Daemon scripts
+The scripts/color_tabs.py is an example of a daemon.  It dynamically
+changes the tab color and title.  To use this script:
+* On the Scripts menu, select Manage, New Python Script
+* Choose Basic or Full depending on whether you will use other
+external python libraries
+* Choose Long running daemon
+* Your default python editor will load with a sample script. 
+Replace the contents with the contents from my scripts/color_tabs.py.
+* In the mod_title method at the bottom, change the display_name
+  and unique_identifier
+* Modify the logic in the update_tab method to determine what the color and
+  text of the tab should be
+* The color_names are the RGB hex values. Use an online HTML color
+  picker to find the desired colors.
+* Save the file
+* From the Scripts menu, choose Manage, Reveal Script in Finder
+* Drag the folder named for the new script into the AutoLaunch folder
+* Restart iTerm
+* Open iTerm Preferences and go to Profiles
+* Click on the profile to run the script
+* On the General tab, pull open the Title dropdown and select the
+title of your script
+* Now your script should update the tab whenever you use that profile
 
 ## User Variables
 iTerm has many built-in variables (https://iterm2.com/documentation-variables.html),
